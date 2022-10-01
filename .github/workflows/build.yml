@@ -21,5 +21,8 @@ jobs:
       - run: |
          java -version
          echo $JAVA_HOME
+         curl -Os https://uploader.codecov.io/latest/linux/codecov 
+         chmod +x codecov 
+         ./codecov
       - run: ./mvnw install
       - uses: codecov/codecov-action@v1
